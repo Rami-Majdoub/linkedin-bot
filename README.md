@@ -1,11 +1,10 @@
 # linkedin-bot
 [linkedin-private-api](https://github.com/eilonmore/linkedin-private-api)
 
-```
+``` shell
 npm start -- --job="frontend" --count=20
 // or
 node index.js --job="frontend" --count=20
-
 ```
 
 Output: 
@@ -30,4 +29,9 @@ FIS                      Full Stack Engineer
 Amaris Consulting         Java Spring Developer
 SAGEMCOM                 Ingénieur développement Java Confirmé - F/H 
 Capgemini Engineering    Junior BSP Developer
+```
+
+All the options
+``` shell
+node index.js --location="Monastir" --count=20 --skip=0 --job="Angular"
 ```
