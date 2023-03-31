@@ -28,9 +28,14 @@ const password = process.env.PASSWORD;// as string;
 
   const jobs = await jobsScroller.scrollNext();
   jobs.forEach(
-  	job => console.log(
-  		(job.hitInfo?.jobPosting?.companyDetails?.company?.name || "").padEnd(25, " ")
+  	job =>
+  	console.log (
+//  		job.hitInfo?.jobPosting
+  		(job.hitInfo?.sponsored ? "*" : " ")
+//  		+ (job.hitInfo?.jobPosting?.companyDetails?.company?.name || "").padEnd(25, " ")
+  		+ (job.hitInfo?.jobPosting?.formattedLocation || "").padEnd(25, " ")
   		+ job.hitInfo?.jobPosting?.title
+
   	)
   )
 
